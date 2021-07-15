@@ -4,9 +4,7 @@ import com.airlinecompany.flights.model.Flight;
 import com.airlinecompany.flights.service.FlightDataService;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -18,8 +16,19 @@ public class FlightDataController {
     @Autowired
     private FlightDataService flightDataService;
 
-    @GetMapping
+    @PostMapping("/date")
+    public Flight dataFlight(@RequestBody Flight flight){
+        return flightDataService.save(flight);
+    }
+
+
+    @GetMapping("/list")
     public List<Flight> listFlights(Flight flight){
         return flightDataService.findAll(flight);
+    }
+
+    @DeleteMapping("/delete")
+    public void deletaProduto(@RequestBody Flight flight) {
+        flightDataService.delete(flight);
     }
 }

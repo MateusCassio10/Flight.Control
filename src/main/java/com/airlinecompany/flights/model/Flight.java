@@ -11,7 +11,6 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = "flight")
 @Data
 public class Flight {
     @Id
@@ -40,6 +39,6 @@ public class Flight {
     @NotNull
     private Pilot pilot;
 
-    @OneToMany(mappedBy = "flight", cascade = CascadeType.ALL, fetch =FetchType.EAGER)
+    @OneToMany(mappedBy = "flight", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<FlightStatus> flightStatus;
 }
