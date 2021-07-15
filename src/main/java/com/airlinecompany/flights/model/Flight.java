@@ -35,12 +35,11 @@ public class Flight {
     @NotNull
     private Airplane airplane;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    private List<FlightStatus> flightStatuse;
-
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "pilot_id")
     @NotNull
     private Pilot pilot;
 
+    @OneToMany(mappedBy = "flight", cascade = CascadeType.ALL, fetch =FetchType.EAGER)
+    private List<FlightStatus> flightStatus;
 }

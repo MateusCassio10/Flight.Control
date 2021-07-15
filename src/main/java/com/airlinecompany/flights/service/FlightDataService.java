@@ -15,6 +15,6 @@ public class FlightDataService {
 
 
     public List<Flight> findAll(Flight flight) {
-        return flightRepository.findAll(flight);
+        return flightRepository.findAll();
     }
 }
