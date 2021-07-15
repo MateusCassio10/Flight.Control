@@ -1,6 +1,6 @@
 package com.airlinecompany.flights.repository;
 
-import model.Pilot;
+import com.airlinecompany.flights.model.Pilot;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

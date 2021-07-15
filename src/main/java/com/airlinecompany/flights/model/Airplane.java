@@ -1,4 +1,4 @@
-package model;
+package com.airlinecompany.flights.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,8 +9,9 @@ import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
 @Entity
+@Table(name = "airplane")
+@Data
 public class Airplane {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -18,7 +19,5 @@ public class Airplane {
     private String model;
     private double capacity;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    public List<Pilot> pilot;
 
 }

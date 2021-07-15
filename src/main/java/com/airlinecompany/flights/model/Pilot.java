@@ -1,4 +1,4 @@
-package model;
+package com.airlinecompany.flights.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -10,14 +10,13 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "pilot")
 @Data
-public class FlightStatus {
+public class Pilot {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private String status;
-    private String time;
+    private String name;
+    private String birthdayDate;
 
-    @ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    public List<Airplane> airplane;
 }
