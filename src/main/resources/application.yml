@@ -6,7 +6,7 @@ spring:
       ddl-auto: update
 
   datasource:
-    url: jdbc:mysql://localhost:3306/flights?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost:3306/Flight_information?createDatabaseIfNotExist=true
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver

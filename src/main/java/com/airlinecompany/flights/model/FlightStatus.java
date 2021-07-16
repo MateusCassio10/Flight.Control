@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.util.List;
 
 
 @AllArgsConstructor
@@ -19,8 +20,6 @@ public class FlightStatus {
     private String status;
     private String time;
 
-    @ManyToOne
-    @JsonIgnore
-    private Flight flight;
+
 
 }

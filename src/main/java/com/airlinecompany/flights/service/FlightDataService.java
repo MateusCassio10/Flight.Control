@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class FlightDataService {
@@ -14,7 +15,7 @@ public class FlightDataService {
     private FlightRepository flightRepository;
 
 
-    public List<Flight> findAll(Flight flight) {
+    public List findAll(Flight flight) {
         return flightRepository.findAll();
     }
 
@@ -24,5 +25,13 @@ public class FlightDataService {
 
     public void delete(Flight flight) {
         flightRepository.delete(flight);
+    }
+
+    public void edit(Flight flight){
+        flightRepository.save(flight);
+    }
+
+    public Optional<Flight> findById(Long id) {
+        return flightRepository.findById(id);
     }
 }

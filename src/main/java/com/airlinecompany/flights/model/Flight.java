@@ -29,6 +29,9 @@ public class Flight {
     @NotNull
     private String destiny;
 
+    @NotNull
+    private String gate;
+
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "airplane_id")
     @NotNull
@@ -39,6 +42,7 @@ public class Flight {
     @NotNull
     private Pilot pilot;
 
-    @OneToMany(mappedBy = "flight", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "flight_Status_id")
     private List<FlightStatus> flightStatus;
 }
