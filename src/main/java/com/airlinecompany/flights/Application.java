@@ -1,5 +1,6 @@
 package com.airlinecompany.flights;
 
+import com.airlinecompany.flights.model.Airplane;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 

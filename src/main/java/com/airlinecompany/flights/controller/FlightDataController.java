@@ -1,5 +1,6 @@
 package com.airlinecompany.flights.controller;
 
+import com.airlinecompany.flights.model.Airplane;
 import com.airlinecompany.flights.model.Flight;
 import com.airlinecompany.flights.service.FlightDataService;
 

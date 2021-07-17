@@ -1,10 +1,12 @@
 package com.airlinecompany.flights.model;
 
+import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
+import java.time.LocalDate;
 
 @AllArgsConstructor
 @NoArgsConstructor
@@ -14,7 +16,11 @@ public class Pilot {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    @NotNull
     private String name;
-    private String birthdayDate;
+
+    @NotNull
+    private String birthday;
 
 }

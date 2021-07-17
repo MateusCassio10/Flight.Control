@@ -18,10 +18,10 @@ public class Flight {
     private  Long id;
 
     @NotNull
-    private String departure;
+    private String start;
 
     @NotNull
-    private String arrival;
+    private String end;
 
     @NotNull
     private String origin;
@@ -29,8 +29,6 @@ public class Flight {
     @NotNull
     private String destiny;
 
-    @NotNull
-    private String gate;
 
     @ManyToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "airplane_id")
@@ -43,6 +41,6 @@ public class Flight {
     private Pilot pilot;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
-    @JoinColumn(name = "flight_Status_id")
+    @JoinColumn(name = "flight_status_id")
     private List<FlightStatus> flightStatus;
 }
