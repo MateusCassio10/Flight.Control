@@ -15,7 +15,7 @@ public class FlightDataController {
     @Autowired
     private FlightDataService flightDataService;
 
-    @GetMapping("/list")
+    @GetMapping
     public List listFlight(Flight flight){
         return flightDataService.findAll(flight);
     }
